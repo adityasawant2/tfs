@@ -5,8 +5,8 @@ import Footer from "@/components/footer"
 import { Badge } from "@/components/ui/badge"
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'TFS',
+  description: 'TFS Landing page',
   generator: 'v0.dev',
 }
 
