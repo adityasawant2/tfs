@@ -239,6 +239,16 @@ html {
   overflow-x: hidden;
 }
 
+@media (min-width: 769px) {
+  html {
+    transform: scale(0.9);
+    transform-origin: top left;
+    width: 111.111%; /* 100 / 0.9 */
+    height: 111.111%;
+    overflow-x: hidden;
+  }
+}
+
 /* Custom Scrollbar - Enhanced Blue Theme */
 ::-webkit-scrollbar {
   width: 8px;
