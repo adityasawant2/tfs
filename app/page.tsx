@@ -670,18 +670,26 @@ export default function LandingPage() {
 
           {/* Achievements */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {achievements.map((achievement, index) => (
-              <div
-                key={index}
-                className="text-center bg-black/40 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6 shadow-lg shadow-blue-500/10"
-              >
-                <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center">
-                  <achievement.icon className="w-6 h-6 text-white" />
+            {achievements.map((achievement, index) => {
+              const gradients = [
+                "from-pink-500 to-yellow-500",
+                "from-blue-500 to-cyan-500",
+                "from-green-500 to-emerald-500",
+                "from-purple-500 to-indigo-500",
+              ];
+              return (
+                <div
+                  key={index}
+                  className="text-center bg-black/40 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6 shadow-lg shadow-blue-500/10"
+                >
+                  <div className={`w-12 h-12 mx-auto mb-3 bg-gradient-to-r ${gradients[index % gradients.length]} rounded-full flex items-center justify-center`}>
+                    <achievement.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-4xl md:text-5xl font-bold text-white mb-1">{achievement.number}</div>
+                  <div className="text-base md:text-lg font-semibold text-gray-300">{achievement.label}</div>
                 </div>
-                <div className="text-3xl font-bold text-white mb-1">{achievement.number}</div>
-                <div className="text-gray-400 text-sm">{achievement.label}</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Infinite Scroll */}
