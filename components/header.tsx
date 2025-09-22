@@ -41,6 +41,17 @@ export default function Header() {
               { name: "Home", id: "home" },
               { name: "Services", id: "/services" },
               { name: "Contact", id: "/contact" },
+
+
+              { name: "About Us", id:"/aboutus"},
+              { name: "Case Studies", id:"/casestudies" },
+              { name: "Industries", id:"/industries" },
+
+
+
+
+
+
             ].map((item) => (
               item.name === "Home" ? (
                 <button
